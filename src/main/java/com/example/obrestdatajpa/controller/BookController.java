@@ -73,7 +73,7 @@ public class BookController {
     @PostMapping("/api/books")
     public ResponseEntity<Book> create(@RequestBody Book book, @RequestHeader HttpHeaders headers) {
         // Ver desde donde se hace la petición POST
-        System.out.println(headers.get("User-Agent"));
+        //System.out.println(headers.get("User-Agent"));
         if (book.getId() != null) {
             log.warn("Try to create a book with id");
             System.out.println("Try to create a book wit id");
@@ -100,7 +100,7 @@ public class BookController {
 
     // Borrar base de datos
     @DeleteMapping("/api/books/{id}")
-    // Anotación OpenApi
+    // Anotación OpenApi - Oculto
     @Hidden
     public ResponseEntity<Book> delete(@PathVariable Long id) {
         if (!bookRepository.existsById(id)) {
@@ -112,7 +112,7 @@ public class BookController {
     }
 
     @DeleteMapping("/api/books")
-    // Anotación OpenApi
+    // Anotación OpenApi - Oculto
     @Hidden
     public ResponseEntity<Book> deleteAll() {
         if (bookRepository.count() == 0) {

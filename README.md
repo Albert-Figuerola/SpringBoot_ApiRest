@@ -21,14 +21,18 @@ Aplicación API REST con acceso a base de datos H2 para persistir la informació
 
 El acceso se puede realizar desde Postman o navegador.
 
-## Entidad book
+## Test
 
-* Creación de la clase book, del objeto book con sus artibutos, constructores y getters y setters
-* BookRepository - Permite crear books en la bbdd
-* BookController - Permite acceder desde una url
+* Se han creado clases para testear tanto la capa de servicio como el controlador.
+
+## Entidad book - BookController
+
+* Creación de la clase book, del objeto book con sus artibutos, constructores y getters y setters.
+* BookRepository - Permite hacer CRUD de books en la bbdd.
+* BookController - Maneja las solicitudes HTTP y define la lógica para procesarlas.
 * Operaciones:
   * Buscar todos los libros
-  * Buscar un solo libro
+  * Buscar un solo libro por ID
   * Crear un nuevo libro
   * Actualizar un libro existente
   * Borrar un libro existente

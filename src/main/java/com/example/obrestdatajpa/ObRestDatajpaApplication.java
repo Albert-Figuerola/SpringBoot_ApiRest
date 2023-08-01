@@ -20,7 +20,7 @@ public class ObRestDatajpaApplication {
 		// Crear un libro
 		Book book1 = new Book(null, "Harry Potter", "JK Rowlling", 500, 19.90, LocalDate.of(2019,9,30),true);
 		Book book2 = new Book(null, "El mundo màgico", "Terry Pratchet", 200, 12.90, LocalDate.of(2015,9,30),true);
-		Book book3 = new Book(null, "El temor de un hombre sabio", "Un autor", 500, 16.90, LocalDate.of(2012,9,30),false);
+		Book book3 = new Book(null, "El temor de un hombre sabio", "Un autor", 290, 16.90, LocalDate.of(2012,9,30),false);
 
 		System.out.println("Libros antes: " + repository.findAll().size());
 
